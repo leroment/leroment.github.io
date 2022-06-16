@@ -281,12 +281,6 @@ footer {
   color: #fff;
 }
 
-@media screen and (max-width: 425px) {
-  .text {
-    font: 25px Arial, sans-serif;
-  }
-}
-
 @media screen and (max-width: 768px) {
   html,
   body {
@@ -303,11 +297,39 @@ footer {
   }
 
   .chart {
-    width: 500px;
-    height: 500px;
+    width: 450px;
+    height: 450px;
   }
 
   #scrollbutton {
     left: 50%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .text {
+    font: 25px Arial, sans-serif;
+  }
+  .chart {
+    position: relative;
+    left: 20px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .text {
+    font: 25px Arial, sans-serif;
+  }
+  .chart {
+    position: relative;
+    left: 20px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .chart {
+    width: 300px;
+    height: 300px;
+    left: 10px;
   }
 }
