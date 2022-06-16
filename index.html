@@ -1,0 +1,128 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/timeline.css" />
+    <link rel="stylesheet" href="css/form.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  </head>
+  <body>
+    <a id="scrollbutton"></a>
+    <nav>
+      <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+      <div id="menu" class="menu">
+        <div id="home-menu" class="menu-item">Home</div>
+        <div id="about-menu" class="menu-item">About Me</div>
+        <div id="skills-menu" class="menu-item">Skills</div>
+        <div id="work-experience-menu" class="menu-item">Work Experience</div>
+        <div id="contact-menu" class="menu-item">Contact Me</div>
+      </div>
+    </nav>
+    <section
+      id="home"
+      class="flex flex-column flex-justify-content-center flex-align-items-center"
+    >
+    <div class="box">
+      <div class="text">
+        Hello guys, I'm
+        <span class="highlight">Andrew Cai</span>.
+      </div>
+      </div>
+      <button class="button page-link" onclick="openGithub()">View my work</button>
+    </div>
+    </section>
+    <section
+      id="about"
+      class="wrapper flex flex-column flex-align-items-center flex-gap-5"
+    >
+      <h1 class="title">About Me</h1>
+      <div class="title-bar"></div>
+      <div class="picture">
+        <img src="img/profile.jpg" />
+      </div>
+      <div class="description">
+        <ul>
+          <li>I have 2 years of industry experience, ranging from corporate to government.</li>
+          <li>I graduated from the University of Technology, Sydney in 2021.</li>
+          <li>Tech stack: mainly in .NET + React/Angular but I am open to anything really.</li>
+        </ul>
+      </div>
+    </section>
+    <section id="skills" class="wrapper flex flex-column flex-align-items-center flex-gap-5">
+      <h1 class="title">Technical Skills</h1>
+      <div class="title-bar"></div>
+      <div id="chart_div" class="chart"></div>
+    </section>
+    <section id="work-experience">
+      <div class="wrapper flex flex-column flex-align-items-center flex-gap-5">
+        <h1 class="title-white">Work Experience</h1>
+        <div class="title-bar-white"></div>
+        <div class="timeline margin-bottom">
+          <div class="container left">
+            <div class="content">
+              <h2>2021 - NTT Ltd</h2></br>
+              <p>Worked with two clients: (government): <br />
+                - Department of Agriculture, Water and the Environment <br />
+                - ACCC <br />
+                - Foresight project </p>
+            </div>
+          </div>
+          <div class="container right">
+            <div class="content">
+              <h2>2020 - SAM.Coach</h2> <br/>
+              <p>
+                - Blazor (C#) front-end development with Ant-Design framework <br />
+                - Backend-development of RESTful API with Azure Functions, adhering to Microservice Architecture <br/>
+                - Advocated, implemented, and adhered to Agile development practices, continuous integration, test-
+                driven development best practices </p>
+            </div>
+          </div>
+          <div class="container left">
+            <div class="content">
+              <h2>2019 - SCRIM Safety First</h2> <br/>
+              <p>- Angular 2+ development for WH&S Portal <br />
+                - Backend ASP.net Core RESTful API <br />
+                - Microsoft Dynamics 365 / CRM Customisation and Configuration, CRM SDK plugin development <br />
+                - Azure DevOps CI/CD pipelines deployment <br />
+                - Technical Support Engineer for existing SCRIM clients</p>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+    <section id="contact" class="wrapper flex flex-column flex-justify-content-center flex-align-items-center flex-gap-5">
+      <h1 class="title">Contact</h1>
+      <div class="title-bar"></div>
+      <form target="_blank" action="https://formsubmit.co/andrewcai19972011@gmail.com" method="POST">
+        <input type="hidden" name="_next" value="https://yourdomain.co/thanks.html">
+        <div class="row">
+          <label for="name">Name</label><br>
+          <input type="text" id="name" name="name"><br>
+        </div>
+        <div class="row">
+          <label for="company">Company</label><br>
+          <input type="text" id="company" name="company"><br>
+        </div>
+        <div class="row">
+          <label for="email">Email Address</label><br>
+          <input type="email" id="email" name="email"><br>
+        </div>
+        <div class="row">
+          <label for="subject">Subject</label><br>
+          <input type="text" id="subject" name="_subject"><br>
+        </div>
+        <div class="row">
+          <label for="message">Message</label><br>
+          <textarea id="message" name="message"></textarea><br>
+        </div>
+        <input type="text" name="_honey" style="display:none">
+        <input type="submit" name="submit" value="Submit">
+      </form>
+    </section>
+    <script src="js/charts.js"></script>
+    <script src="js/scrollbutton.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>

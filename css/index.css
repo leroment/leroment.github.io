@@ -1,0 +1,296 @@
+* {
+  top: 0;
+  left: 0;
+  margin: 0;
+}
+
+html {
+  display: block;
+}
+
+head {
+  display: none;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+h1 {
+  font: 35px Arial, sans-serif;
+}
+
+p {
+  font: 20px Arial, sans-serif;
+  overflow-wrap: break-word;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  height: 60px;
+  background: #1b242f;
+}
+
+.wrapper {
+  padding: 50px 100px;
+}
+
+section#home {
+  background: #304054;
+  height: calc(100vh - 60px);
+}
+
+.highlight {
+  color: #ff9800;
+}
+
+section#about {
+  background: white;
+}
+
+section#projects {
+  background: white;
+  height: 300px;
+}
+
+section#work-experience {
+  background: #304054;
+  color: white;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+li {
+  padding-left: 1.3em;
+  font: 20px Arial, sans-serif;
+  margin: 0 0 10px 0;
+}
+li:before {
+  content: "\f00c"; /* FontAwesome Unicode */
+  font-family: FontAwesome;
+  display: inline-block;
+  margin-left: -1.3em; /* same as padding-left set on li */
+  width: 1.3em; /* same as padding-left set on li */
+}
+
+.menu-item {
+  color: white;
+  font: 15px Arial, sans-serif;
+  cursor: pointer;
+  display: block;
+}
+
+.menu-item:hover {
+  color: grey;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-align-items-center {
+  align-items: center;
+}
+
+.flex-align-items-stretch {
+  align-items: stretch;
+}
+
+.flex-align-items-space-between {
+  align-items: space-between;
+}
+
+.flex-justify-content-center {
+  justify-content: center;
+}
+
+.flex-justify-content-space-between {
+  justify-content: space-between;
+}
+
+.flex-justify-content-space-around {
+  justify-content: space-around;
+}
+
+.flex-align-items-center {
+  align-items: center;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-gap-5 {
+  gap: 50px;
+}
+
+.flex-gap-10 {
+  gap: 100px;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.text {
+  color: white;
+  font: 35px Arial, sans-serif;
+  line-height: 36pt;
+  margin: 0 0 30px 0;
+  overflow: hidden;
+  border-right: 0.15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  animation: typing 2.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
+}
+
+.button {
+  border: 2px solid #fff;
+  font: 16pt Arial, sans-serif;
+  color: white;
+  display: inline-block;
+  padding: 12px 20px 12px 20px;
+  transition-duration: 0.4s;
+  background-color: #304054;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #161d25;
+  color: white;
+}
+
+.title-bar {
+  border: 2px solid #1b242f;
+  background-color: #1b242f;
+  width: 10%;
+  margin-top: -20px;
+}
+
+.title-bar-white {
+  margin-top: -20px;
+  border: 2px solid white;
+  background-color: white;
+  width: 10%;
+}
+
+img {
+  border-radius: 50%;
+  max-width: 80%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.margin-top {
+  margin-top: 40px;
+}
+
+.margin-bottom {
+  margin-bottom: 40px;
+}
+
+.row {
+  margin: 20px 0;
+}
+
+#scrollbutton {
+  display: inline-block;
+  background-color: #ff9800;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 50%;
+  position: fixed;
+  left: 95%;
+  top: 90%;
+  transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+
+#scrollbutton::after {
+  content: "\f077";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2em;
+  line-height: 45px;
+  color: #fff;
+}
+
+#scrollbutton:hover {
+  cursor: pointer;
+  background-color: #333;
+}
+
+#scrollbutton:active {
+  background-color: #555;
+}
+
+#scrollbutton.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.chart {
+  width: 80%;
+  height: 700px;
+}
+
+footer {
+  background-color: #1b242f;
+  font: 1px Arial, sans-serif;
+  color: #fff;
+}
+
+@media screen and (max-width: 600px) {
+  .menu {
+    gap: 20px;
+  }
+
+  .chart {
+    width: 500px;
+    height: 500px;
+  }
+
+  #scrollbutton {
+    left: 80%;
+  }
+}

@@ -1,0 +1,47 @@
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font: 15px Arial, sans-serif;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  font: 15px Arial, sans-serif;
+}
+
+input[type="submit"] {
+  background-color: #304054;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+}
+
+input[type="submit"]:hover {
+  background-color: #161d25;
+}
+
+textarea {
+  height: 300px;
+  resize: none;
+}
+
+form {
+  width: 50%;
+}
+
+@media screen and (max-width: 600px) {
+  form {
+    width: 100%;
+  }
+}
